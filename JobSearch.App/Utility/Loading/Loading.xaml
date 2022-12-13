@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage
+    x:Class="JobSearch.App.Utility.Loading.Loading"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:popup="clr-namespace:Mopups.Pages;assembly=Mopups"
+    Title="Loading" BackgroundColor="#80000000"
+    CloseWhenBackgroundIsClicked="False">
+
+
+    <ActivityIndicator
+        HorizontalOptions="Center"
+        IsRunning="True"
+        WidthRequest="100"
+        Color="{StaticResource Purple}" />
+
+</popup:PopupPage>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="JobSearch.App.Views.Login"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login">
+
+    <StackLayout>
+        <Label
+            Margin="0,0,0,10"
+            Style="{StaticResource Title}"
+            Text="JobSearch" />
+
+        <Rectangle BackgroundColor="#D7CCFF" WidthRequest="370" />
+
+        <Grid
+            ColumnDefinitions="*,*"
+            RowDefinitions="*,*,*"
+            RowSpacing="15"
+            TranslationY="-50"
+            VerticalOptions="CenterAndExpand">
+            <Frame
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                StyleClass="EntryFrame">
+                <Entry x:Name="txtEmail" Placeholder="E-Mail" />
+            </Frame>
+
+            <Frame
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                StyleClass="EntryFrame">
+                <Entry
+                    x:Name="txtPassword"
+                    IsPassword="True"
+                    Placeholder="Senha"
+                    ReturnType="Done" />
+            </Frame>
+
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Clicked="GoStart"
+                Text="Acessar" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="1"
+                Clicked="GoRegister"
+                Text="Cadastrar" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

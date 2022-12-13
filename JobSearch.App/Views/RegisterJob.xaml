@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="JobSearch.App.Views.RegisterJob"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="RegisterJob">
+
+    <ScrollView>
+        <StackLayout Spacing="10">
+            <Grid
+                Margin="0,0,0,10"
+                ColumnDefinitions="50,*,50"
+                RowDefinitions="*">
+                <ImageButton
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Clicked="GoBack"
+                    Source="goback"
+                    Style="{StaticResource BackButton}" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Style="{StaticResource Title}"
+                    Text="JobSearch" />
+                <ImageButton
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Clicked="Save"
+                    Style="{StaticResource OkButton}" />
+            </Grid>
+
+            <Rectangle BackgroundColor="#D7CCFF" WidthRequest="1" />
+
+            <!--<ScrollView>-->
+            <StackLayout Spacing="10">
+                <Frame Margin="0,10,0,0" StyleClass="EntryFrame">
+                    <StackLayout>
+                        <Entry x:Name="txtCompany" Placeholder="Empresa" />
+                        <Label
+                            x:Name="txtCompanyError"
+                            IsVisible="false"
+                            TextColor="OrangeRed" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame StyleClass="EntryFrame">
+                    <StackLayout>
+                        <Entry x:Name="txtJobTitle" Placeholder="Cargo" />
+                        <Label
+                            x:Name="txtJobTitleError"
+                            IsVisible="false"
+                            TextColor="OrangeRed" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame StyleClass="EntryFrame">
+                    <StackLayout>
+                        <Entry x:Name="txtCityState" Placeholder="Cidade/UF" />
+                        <Label
+                            x:Name="txtCityStateError"
+                            IsVisible="false"
+                            TextColor="OrangeRed" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame StyleClass="EntryFrame">
+                    <StackLayout>
+                        <Entry
+                            x:Name="txtInitialSalary"
+                            Keyboard="Numeric"
+                            Placeholder="Salário Inicial (reais)" />
+                        <Label
+                            x:Name="txtInitialSalaryError"
+                            IsVisible="false"
+                            TextColor="OrangeRed" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame StyleClass="EntryFrame">
+                    <StackLayout>
+                        <Entry
+                            x:Name="txtFinalSalary"
+                            Keyboard="Numeric"
+                            Placeholder="Salário Final (reais)" />
+                        <Label
+                            x:Name="txtFinalSalaryError"
+                            IsVisible="false"
+                            TextColor="OrangeRed" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame StyleClass="EntryFrame">
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            HorizontalOptions="StartAndExpand"
+                            Style="{StaticResource LabelEntry}"
+                            Text="Regime" />
+                        <RadioButton
+                            x:Name="rbCLT"
+                            Content="CLT"
+                            IsChecked="True" />
+                        <RadioButton x:Name="rbPJ" Content="PJ" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame StyleClass="EntryFrame">
+                    <StackLayout>
+                        <Entry x:Name="txtTecnologyTools" Placeholder="Tecnologias/Ferramentas" />
+                        <Label
+                            x:Name="txtTecnologyToolsError"
+                            IsVisible="false"
+                            TextColor="OrangeRed" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame StyleClass="EntryFrame">
+                    <StackLayout>
+                        <Entry x:Name="txtCompanyDescription" Placeholder="Descrição da empresa" />
+                        <Label
+                            x:Name="txtCompanyDescriptionError"
+                            IsVisible="false"
+                            TextColor="OrangeRed" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame StyleClass="EntryFrame">
+                    <StackLayout>
+                        <Entry x:Name="txtJobDescription" Placeholder="descrição do trabalho" />
+                        <Label
+                            x:Name="txtJobDescriptionError"
+                            IsVisible="false"
+                            TextColor="OrangeRed" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame StyleClass="EntryFrame">
+                    <StackLayout>
+                        <Entry x:Name="txtBenefits" Placeholder="Benefícios" />
+                        <Label
+                            x:Name="txtBenefitsError"
+                            IsVisible="false"
+                            TextColor="OrangeRed" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame StyleClass="EntryFrame">
+                    <StackLayout>
+                        <Entry
+                            x:Name="txtInteresedSendToEmailTo"
+                            Placeholder="Interessados enviar e-mail para"
+                            ReturnType="Done" />
+                        <Label
+                            x:Name="txtInteresedSendToEmailToError"
+                            IsVisible="false"
+                            TextColor="OrangeRed" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <!--</ScrollView>-->
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

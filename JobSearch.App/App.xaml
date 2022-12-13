@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application
+    x:Class="JobSearch.App.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:JobSearch.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="Resources/Styles/Colors.xaml" />-->
+                <!--<ResourceDictionary Source="Resources/Styles/Styles.xaml" />-->
+            </ResourceDictionary.MergedDictionaries>
+
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="Black">#000000</Color>
+            <Color x:Key="Purple">#623CEA</Color>
+            <Color x:Key="LigthPurple">#D7CCFF</Color>
+            <Color x:Key="GreyBlue">#F1F3F6</Color>
+            <Color x:Key="DarkGreyBlue">#B3BDC8</Color>
+            <Color x:Key="Grey">#8FA0AC</Color>
+            <Color x:Key="LightGrey">#CAD1DC</Color>
+            <Color x:Key="DarkGrey">#4E5C69</Color>
+
+            <Style ApplyToDerivedTypes="True" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+                <Setter Property="Padding" Value="15,15,15,0" />
+                <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
+            </Style>
+
+            <Style x:Key="Title" TargetType="Label">
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="MontserratBold" />
+                <Setter Property="TextColor" Value="{StaticResource Purple}" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="{StaticResource DarkGreyBlue}" />
+                <Setter Property="TextColor" Value="{StaticResource Black}" />
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="Body" />
+                <Setter Property="ReturnType" Value="Next" />
+            </Style>
+
+            <Style TargetType="Editor">
+                <Setter Property="PlaceholderColor" Value="{StaticResource DarkGreyBlue}" />
+                <Setter Property="TextColor" Value="{StaticResource Black}" />
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="Body" />
+            </Style>
+
+            <Style Class="EntryFrame" TargetType="Frame">
+                <Setter Property="Padding" Value="10,10" />
+                <Setter Property="BackgroundColor" Value="{StaticResource GreyBlue}" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="HasShadow" Value="False" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Purple}" />
+                <Setter Property="TextColor" Value="{StaticResource White}" />
+                <Setter Property="FontFamily" Value="MontSerratRegular" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="FrameButton" TargetType="Frame">
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Purple}" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="WidthRequest" Value="75" />
+            </Style>
+
+            <Style x:Key="BackButton" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="WidthRequest" Value="48" />
+                <Setter Property="HeightRequest" Value="25" />
+            </Style>
+
+            <Style x:Key="OkButton" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="{StaticResource Purple}" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="Padding" Value="3" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="WidthRequest" Value="48" />
+                <Setter Property="HeightRequest" Value="38" />
+                <Setter Property="Source" Value="check" />
+            </Style>
+
+            <Style x:Key="BaseLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="Body" />
+            </Style>
+
+            <Style
+                x:Key="TextSecondary"
+                BasedOn="{StaticResource BaseLabel}"
+                TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Grey}" />
+            </Style>
+
+            <Style
+                x:Key="TextPrimary"
+                BasedOn="{StaticResource BaseLabel}"
+                TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource DarkGrey}" />
+            </Style>
+
+            <Style
+                x:Key="MoneyLabel"
+                BasedOn="{StaticResource BaseLabel}"
+                TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Purple}" />
+            </Style>
+
+            <Style
+                x:Key="TitlePrimary"
+                BasedOn="{StaticResource BaseLabel}"
+                TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Purple}" />
+                <Setter Property="FontFamily" Value="MontserratBold" />
+            </Style>
+
+            <Style
+                x:Key="CurrencyLabel"
+                BasedOn="{StaticResource BaseLabel}"
+                TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource LightGrey}" />
+            </Style>
+
+            <Style x:Key="IdLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Grey}" />
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="Caption" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="End" />
+            </Style>
+
+            <!--  Icones  -->
+            <Style Class="SearchButton" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="WidthRequest" Value="30" />
+                <Setter Property="HeightRequest" Value="30" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Source" Value="search" />
+            </Style>
+
+            <Style Class="PinButton" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="WidthRequest" Value="30" />
+                <Setter Property="HeightRequest" Value="30" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Source" Value="pin_mapa" />
+            </Style>
+
+            <Style TargetType="RadioButton">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource DarkGreyBlue}" />
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="Body" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Name="LabelEntry" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource DarkGreyBlue}" />
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="Body" />
+                <Setter Property="Padding" Value="5,11" />
+            </Style>
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
